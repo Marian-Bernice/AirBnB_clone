@@ -210,6 +210,5 @@ class HBNBCommand(cmd.Cmd):
                     # print(search)
             print(counter)
 
-
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
