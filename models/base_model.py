@@ -15,6 +15,7 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """Initialize a BaseModel"""
+        
         if kwargs:
             for key, val in kwargs.items():
                 if key != '__class__':
@@ -37,12 +38,13 @@ class BaseModel:
                                          self.__dict__)
 
     def save(self):
-        """updates the public ins attr upd_at with the curren one"""
+        """updates the public instance attribute updated_at with the
+        current datetime"""
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """ returns a dic containing keys and values of the instance"""
+        """ returns a dict containing keys and values of the instance"""
         n_dict = self.__dict__.copy()
         if "created_at" in n_dict:
             n_dict["created_at"] = n_dict["created_at"].strftime(dtm)
