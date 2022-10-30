@@ -126,7 +126,7 @@ class TestPlace(unittest.TestCase):
 
         self.assertEqual(type(Place.latitude), float)
         self.assertEqual(type(Place.longitude), float)
-        self.assertEqual(type(Place.amenity_ids), list)
+        self.assertEqual(type(Place.amenity_ids), str)
 
 
 if __name__ == '__main__':
