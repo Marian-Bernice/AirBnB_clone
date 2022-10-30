@@ -194,6 +194,7 @@ class CreateTest(unittest.TestCase):
                                        '[0-9a-f]{3}-[89ab][0-9a-f]{3}-'
                                        '[0-9a-f]{12}$')
 
+
 class ShowTest(unittest.TestCase):
     """testing command show in console"""
 

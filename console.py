@@ -40,7 +40,7 @@ class HBNBCommand(cmd.Cmd):
         """ Edit given command to allow second type of input"""
         split_line = line.split("(")
         flag_instance = 0
-        if(len(split_line) > 1):
+        if (len(split_line) > 1):
             tmp = split_line[0].split(".", 1)
             flag_instance = 1
         if (flag_instance == 1):
@@ -209,6 +209,7 @@ class HBNBCommand(cmd.Cmd):
                     counter += 1
                     # print(search)
             print(counter)
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
